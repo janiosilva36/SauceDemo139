@@ -11,3 +11,19 @@ Funcionalidade: Selecionar Produto na Loja
         Entao exibe a pagina do carrinho com a quantidade "1"
         E nome do produto "Sauce Labs Backpack"
         E o preco como "$29.99"
+
+    Esquema do Cenario: Selecao de Produto com Sucesso DDT
+        Dado que acesso a pagina incial do site
+        Quando preencho o usuario como <usuario>
+        E a senha <senha> e clico no botao Login
+        Entao exibe <tituloSecao> no titulo da secao
+        Quando adiciono o produto <produto> ao carrinho
+        E clico no icone do carrinho de compras
+        Entao exibe a pagina do carrinho com a quantidade <quantidade>
+        E nome do produto <produto>
+        E o preco como <preco>
+
+    Exemplos:
+    | usuario         | senha          | tituloSecao | produto                 | quantidade | preco    |   
+    | "standard_user" | "secret_sauce" | "Products"  | "Sauce Labs Backpack"   | "1"        | "$29.99" |   
+    | "visual_user"   | "secret_sauce" | "Products"  | "Sauce Labs Bike Light" | "1"        | "$9.99"  |
