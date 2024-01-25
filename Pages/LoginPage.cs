@@ -22,11 +22,19 @@ namespace Pages
 
         }
         // Ações a serem usadas na automoção
-        public void PreencherUsuarioESenha(String usuario, String senha)
+        public void PreencherUsuario(String usuario)
         {
             txtUsuario.SendKeys(usuario);
-            txtSenha.SendKeys(senha);
+            
         }
+
+        public void PreencherSenha(String senha)
+        {
+            txtUsuario.SendKeys(senha);
+            
+        }
+
+
 
         public void ClicarNoBotaoLogin()
         {

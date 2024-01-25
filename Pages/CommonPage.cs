@@ -10,7 +10,7 @@ namespace Pages
         protected IWebDriver driver;
 
         // Mapeamneto dos Elementos comuns a duas ou mais telas
-        private IWebElement lbltituloSecao => driver.FindElement(By.CssSelector("span.title"));
+        private IWebElement lblTituloSecao => driver.FindElement(By.CssSelector("span.title"));
 
         private IWebElement icoCarrinho => driver.FindElement(By.CssSelector("a.shopping_cart_link"));
 
@@ -20,6 +20,21 @@ namespace Pages
         {
             this.driver = driver;
         }
+
+
+        // Ações 
+        public String LerTituloDaSecao()
+        {
+            return lblTituloSecao.Text;
+        }
+        public void IrParaOCarrinho()
+        {
+            icoCarrinho.Click();
+        }
+
+
+
+
     }
 
 }
